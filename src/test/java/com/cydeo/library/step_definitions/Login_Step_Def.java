@@ -1,5 +1,6 @@
 package com.cydeo.library.step_definitions;
 
+import com.cydeo.library.pages.LandingPage;
 import com.cydeo.library.pages.LoginPage;
 import com.cydeo.library.utilities.BrowserUtils;
 import com.cydeo.library.utilities.ConfigurationReader;
@@ -7,6 +8,7 @@ import com.cydeo.library.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.jv.Lan;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -14,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Login_Step_Def {
     LoginPage loginPage = new LoginPage();
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
+    LandingPage landingPage = new LandingPage();
 
     @Given("I am on the login page")
     public void i_am_on_the_login_page() {
@@ -76,7 +79,13 @@ public class Login_Step_Def {
 
     }
     @When("there should be {int} users")
-    public void there_should_be_users(Integer int1) {
+    public void there_should_be_users(Integer expectedUserCount) {
+
+        String expectectedUserNum = String.valueOf(expectedUserCount);
+
+        BrowserUtils.waitForVisibility(landingPage.userCount,10);
+        String actualUserCount = landingPage.userCount.getText();
+        Assert.assertEquals("User count is failing!",expectectedUserNum,actualUserCount);
 
     }
 
