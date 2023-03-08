@@ -48,32 +48,32 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     var chartData = {
-        labels:  [ "@librarianParam", ] ,
+        labels:  [ "@all_accounts",  "@librarians",  "@students", ] ,
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data:  [ 16.67, ] 
+                data:  [ 33.33,  33.33,  33.33, ] 
             },
             {
                 label: "Failed",
                 backgroundColor: "#F2928C",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data:  [ 66.67, ] 
+                data:  [ 33.33,  33.33,  33.33, ] 
             },
             {
                 label: "Pending",
                 backgroundColor: "#F5F28F",
-                data:  [ 0.00, ] 
+                data:  [ 0.00,  0.00,  0.00, ] 
             },
             {
                 label: "Undefined",
                 backgroundColor: "#F5B975",
-                data:  [ 16.67, ] 
+                data:  [ 33.33,  33.33,  33.33, ] 
             }
         ]
     };
@@ -133,7 +133,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>06 Mar 2023, 17:11</td>
+      <td>07 Mar 2023, 20:34</td>
     </tr>
   </tbody>
 </table>
@@ -195,20 +195,54 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-tag_1362204052.html">@librarianParam</a></td>
+        <td class="tagname"><a href="report-tag_1888180483.html">@all_accounts</a></td>
 
-        <td      class="passed"    >1</td>
+        <td      class="passed"    >9</td>
+        <td >0</td>
+        <td     class="skipped"   >9</td>
+        <td >0</td>
+        <td   class="undefined" >9</td>
+        <td class="total">27</td>
+
+        <td >0</td>
+        <td  class="failed"    >9</td>
+        <td class="total">9</td>
+
+        <td class="duration" data-value="2008600">0.002</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_2532393370.html">@librarians</a></td>
+
+        <td      class="passed"    >5</td>
+        <td >0</td>
+        <td     class="skipped"   >5</td>
+        <td >0</td>
+        <td   class="undefined" >5</td>
+        <td class="total">15</td>
+
+        <td >0</td>
+        <td  class="failed"    >5</td>
+        <td class="total">5</td>
+
+        <td class="duration" data-value="1003800">0.001</td>
+        <td class="failed">Failed</td>
+      </tr>
+      <tr>
+        <td class="tagname"><a href="report-tag_15566295.html">@students</a></td>
+
+        <td      class="passed"    >4</td>
         <td >0</td>
         <td     class="skipped"   >4</td>
         <td >0</td>
-        <td   class="undefined" >1</td>
-        <td class="total">6</td>
+        <td   class="undefined" >4</td>
+        <td class="total">12</td>
 
         <td >0</td>
-        <td  class="failed"    >1</td>
-        <td class="total">1</td>
+        <td  class="failed"    >4</td>
+        <td class="total">4</td>
 
-        <td class="duration" data-value="1001000">0.001</td>
+        <td class="duration" data-value="1004800">0.001</td>
         <td class="failed">Failed</td>
       </tr>
   </tbody>
@@ -216,27 +250,27 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td></td>
-      <td>1</td>
+      <td>18</td>
       <td>0</td>
-      <td>4</td>
+      <td>18</td>
       <td>0</td>
-      <td>1</td>
-      <td>6</td>
+      <td>18</td>
+      <td>54</td>
 
       <td>0</td>
-      <td>1</td>
-      <td>1</td>
+      <td>18</td>
+      <td>18</td>
 
-      <td class="duration">0.001</td>
-      <td>1</td>
+      <td class="duration">0.004</td>
+      <td>3</td>
     </tr>
     <tr>
       <td></td>
-      <td>16.67%</td>
+      <td>33.33%</td>
       <td>0.00%</td>
-      <td>66.67%</td>
+      <td>33.33%</td>
       <td>0.00%</td>
-      <td>16.67%</td>
+      <td>33.33%</td>
       <td></td>
       <td>0.00%</td>
       <td>100.00%</td>
